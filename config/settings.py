@@ -38,8 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
-    'recommender',
-    'topdistricts',
+    'apps.recommender',
+    'apps.topdistricts',
 ]
 
 MIDDLEWARE = [

@@ -3,4 +3,4 @@ from django.apps import AppConfig
 
 class TopdistrictsConfig(AppConfig):
     default_auto_field = 'django.db.models.BigAutoField'
-    name = 'topdistricts'
+    name = 'apps.topdistricts'
