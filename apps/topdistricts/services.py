@@ -10,13 +10,13 @@ class GetTopDistrict:
         
         #api of temperature
         for district in lat_long_list:
-            temp_url = f"https://api.open-meteo.com/v1/forecast?latitude={district.get("lat")}&longitude={district.get("long")}&hourly=temperature_2m"
+            temp_url = f"https://api.open-meteo.com/v1/forecast?latitude={district.get("lat")}&longitude={district.get("long")}&hourly=temperature_2m&forecast_days=7"
             temp_response = requests.get(temp_url)
             temp_data = temp_response.json()
             temp_list.append(temp_data)
         #api of pm2_5
         for district in lat_long_list:
-            pm_url=f"https://air-quality-api.open-meteo.com/v1/air-quality?latitude={district.get("lat")}&longitude={district.get("long")}&hourly=pm2_5"
+            pm_url=f"https://air-quality-api.open-meteo.com/v1/air-quality?latitude={district.get("lat")}&longitude={district.get("long")}&hourly=pm2_5&forecast_days=7"
             pm_response= requests.get(pm_url)
             pm_data=pm_response.json()
             pm_list.append(pm_data)
